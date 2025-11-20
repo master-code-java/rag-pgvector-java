@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ragdb
+    username: demo
+    password: demo
+    hikari:
+      maximum-pool-size: 5
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+
+app:
+  openai:
+    apiKey: ${OPENAI_API_KEY}
+    embeddingModel: text-embedding-3-small
+    dims: 1536
+  openaiChatModel: chatgpt-4o-mini
